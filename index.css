@@ -1,0 +1,48 @@
+/* @import url(small.css) (min-width:0px);
+@import url(large.css) (min-width:900px); */
+
+:root {
+  --main-bg-color: rgb(35, 35, 35);
+  --main-text-color: #f9faffde;
+  --shadow-color: #858ebc;
+}
+
+html {
+  display: block;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  text-shadow: var(--shadow-color) -2px 2px 8px;
+  /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='200' height='200' viewport='-200 0 100 100' style='fill:transparent;font-size:250px;'><text y='50%'>🌱</text></svg>") 50 50,auto; /*!emojicursor.app*/
+  /* cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='10:black;font-size:600px;'><text y='80%'>🌱</text></svg>") 100 100,auto; !emojicursor.app */
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.mask1 {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' style='fill:black;font-size:600px;'><text y='80%'>🌱</text></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' style='fill:black;font-size:600px;'><text y='80%'>🌱</text></svg>");
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+p {
+  position: absolute;
+  font-size: 12px;
+  transition: fade 0.2s ease-in;
+  color: rgb(7, 206, 7);
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
